@@ -34,16 +34,27 @@ const Navbar = () => {
             />
           </svg>
         </span>
-        <p className="text-xl font-medium text-slate-900">Dev Gears</p>
+        <p className="text-xl font-medium text-slate-900">
+          Dev Gears <hr className="border-none h-1 bg-white" />
+        </p>
       </div>
       <ul className="flex items-center space-x-16">
-        <li onClick={() => setMenu("shop")}>Shop {menu === "shop" && <hr className="border-none h-1 bg-red-500" />}</li>
-        <li onClick={() => setMenu("electronics")}>Electronics {menu === "electronics" && <hr className="border-none h-1 bg-red-500" />}</li>
-        <li onClick={() => setMenu("mobile")}>Mobile {menu === "mobile" && <hr className="border-none h-1 bg-red-500" />}</li>
-        <li onClick={() => setMenu("living")}>Home & Living {menu === "living" && <hr className="border-none h-1 bg-red-500" />}</li>
+        <li onClick={() => setMenu("shop")} className="cursor-pointer">
+          Shop {menu === "shop" ? <hr className="border-none h-1 bg-red-500" /> : <hr className="border-none h-1 bg-white" />}
+        </li>
+        <li onClick={() => setMenu("electronics")} className="cursor-pointer">
+          Electronics {menu === "electronics" ? <hr className="border-none h-1 bg-red-500" /> : <hr className="border-none h-1 bg-white" />}
+        </li>
+        <li onClick={() => setMenu("mobile")} className="cursor-pointer">
+          Mobile {menu === "mobile" ? <hr className="border-none h-1 bg-red-500" /> : <hr className="border-none h-1 bg-white" />}
+        </li>
+        <li onClick={() => setMenu("living")} className="cursor-pointer">
+          Home & Living {menu === "living" ? <hr className="border-none h-1 bg-red-500" /> : <hr className="border-none h-1 bg-white" />}
+        </li>
       </ul>
       <div className="flex items-center space-x-4">
         <button className="px-12 py-2 rounded-full border border-red-300 cursor-pointer">Login</button>
+        <hr className="border-none h-1 bg-white" />
         <div className="relative">
           <p>
             {" "}
@@ -65,6 +76,7 @@ const Navbar = () => {
               <circle cx="10.5" cy="20.5" r="1.5" stroke="currentColor" stroke-width="1.5" />
               <circle cx="17.5" cy="20.5" r="1.5" stroke="currentColor" stroke-width="1.5" />
             </svg>
+            <hr className="border-none h-1 bg-white" />
           </p>
           <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-xs">0</span>
         </div>
