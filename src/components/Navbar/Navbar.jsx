@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
@@ -40,16 +41,19 @@ const Navbar = () => {
       </div>
       <ul className="flex items-center space-x-16">
         <li onClick={() => setMenu("shop")} className="cursor-pointer">
-          Shop {menu === "shop" ? <hr className="border-none h-1 bg-red-500" /> : <hr className="border-none h-1 bg-white" />}
+          <Link to="/">Shop</Link> {menu === "shop" ? <hr className="border-none h-1 bg-red-500" /> : <hr className="border-none h-1 bg-white" />}
         </li>
         <li onClick={() => setMenu("electronics")} className="cursor-pointer">
-          Electronics {menu === "electronics" ? <hr className="border-none h-1 bg-red-500" /> : <hr className="border-none h-1 bg-white" />}
+          <Link to="/electronics">Electronics</Link>{" "}
+          {menu === "electronics" ? <hr className="border-none h-1 bg-red-500" /> : <hr className="border-none h-1 bg-white" />}
         </li>
         <li onClick={() => setMenu("mobile")} className="cursor-pointer">
-          Mobile {menu === "mobile" ? <hr className="border-none h-1 bg-red-500" /> : <hr className="border-none h-1 bg-white" />}
+          <Link to="mobile"> Mobile </Link>
+          {menu === "mobile" ? <hr className="border-none h-1 bg-red-500" /> : <hr className="border-none h-1 bg-white" />}
         </li>
         <li onClick={() => setMenu("living")} className="cursor-pointer">
-          Home & Living {menu === "living" ? <hr className="border-none h-1 bg-red-500" /> : <hr className="border-none h-1 bg-white" />}
+          <Link to="living">Home & Living </Link>
+          {menu === "living" ? <hr className="border-none h-1 bg-red-500" /> : <hr className="border-none h-1 bg-white" />}
         </li>
       </ul>
       <div className="flex items-center space-x-4">
