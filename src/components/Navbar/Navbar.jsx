@@ -1,11 +1,9 @@
-import React, { useState } from "react";
 import { Link } from "react-router";
 
 const Navbar = () => {
-  const [menu, setMenu] = useState("shop");
   return (
-    <div className="flex justify-between items-center md:px-36 boder border-gray-200 py-4 shadow-sm">
-      <div className="nav-logo flex items-center space-x-2">
+    <div className="w-full flex space-x-10  items-center md:px-28 boder border-gray-200 py-4 shadow-sm">
+      <div className="flex items-center space-x-2">
         <span>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" color="#E02424" fill="none">
             <path d="M15 9V15H9V9H15Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
@@ -35,27 +33,30 @@ const Navbar = () => {
             />
           </svg>
         </span>
-        <p className="text-xl font-medium text-slate-900">
-          TechGear Hub <hr className="border-none h-1 bg-white" />
-        </p>
+        <p className="text-xl font-semibold text-slate-900">TechGear Hub</p>
       </div>
-      <ul className="flex items-center space-x-16">
-        <li onClick={() => setMenu("shop")} className="cursor-pointer">
-          <Link to="/">Shop</Link> {menu === "shop" ? <hr className="border-none h-1 bg-red-500" /> : <hr className="border-none h-1 bg-white" />}
-        </li>
-        <li onClick={() => setMenu("electronics")} className="cursor-pointer">
-          <Link to="/electronics">Electronics</Link>{" "}
-          {menu === "electronics" ? <hr className="border-none h-1 bg-red-500" /> : <hr className="border-none h-1 bg-white" />}
-        </li>
-        <li onClick={() => setMenu("mobile")} className="cursor-pointer">
-          <Link to="mobile"> Mobile </Link>
-          {menu === "mobile" ? <hr className="border-none h-1 bg-red-500" /> : <hr className="border-none h-1 bg-white" />}
-        </li>
-        <li onClick={() => setMenu("furniture")} className="cursor-pointer">
-          <Link to="furniture">Furniture</Link>
-          {menu === "furniture" ? <hr className="border-none h-1 bg-red-500" /> : <hr className="border-none h-1 bg-white" />}
-        </li>
-      </ul>
+      <div className="flex-grow flex  items-center gap-16 ">
+        <ul className="flex items-center space-x-4">
+          <li className="cursor-pointer">
+            <Link to="/">Shop</Link>
+            <hr className="bg-red-500 h-1 border-none" />
+          </li>
+          <li className="cursor-pointer">
+            <a href="#categories">Shop by Category</a>
+          </li>
+        </ul>
+        <form action="" className="flex-grow" method="POST">
+          <div className="flex items-center space-x-4 border border-gray-200 rounded-full p-1">
+            <input type="text" placeholder="I'm shopping for ..." className=" px-4.5 py-2.5 flex-grow focus:outline-none" />
+            <button className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-full cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#fff" viewBox="0 0 256 256">
+                <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+
       <div className="flex items-center space-x-4">
         <Link to="/login">
           {" "}
