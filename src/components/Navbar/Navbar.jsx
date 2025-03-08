@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 const Navbar = () => {
   return (
-    <div className="w-full flex space-x-10  items-center md:px-28 boder border-gray-200 py-4 shadow-sm">
+    <div className="w-full flex space-x-10  items-center px-8 md:px-28 boder border-gray-200 py-4 shadow-sm">
       <div className="flex items-center space-x-2">
         <span>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" color="#E02424" fill="none">

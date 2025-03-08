@@ -2,14 +2,13 @@ import chair_1 from "./chair_1.png";
 import chair_2 from "./chair_2.png";
 import chair_3 from "./chair_3.png";
 import dell_xp_1 from "./Dell_xps.png";
-
+import keyboard from "./keyboard.png";
 import mackbook_air from "./mackbook_air.png";
 
 import earpod_2 from "./earpod_2.png";
 import earpod_3 from "./earpod_3.png";
 import hp_1 from "./hp_1.png";
 import hp_envy from "./hp_envy.png";
-import iphone_1 from "./iphone_1.png";
 import iphone_2 from "./iphone_2.png";
 import iphone_3 from "./iphone_3.png";
 import lenovo_1 from "./lenovo_1.png";
@@ -46,14 +45,14 @@ export const all_products = [
   },
   {
     id: 3,
-    name: "Ergonomic Mesh Office / Chair Home",
-    old_price: 200000.0,
+    name: "6 HP USB Slim Business Keyboards ",
+    old_price: 70000.0,
 
-    image: chair_3,
-    category: "furniture",
+    image: keyboard,
+    category: "keybaord_mice",
     sale: true,
     discount: 0.2,
-    ratings: 4,
+    ratings: 4.5,
   },
   {
     id: 4,
@@ -106,7 +105,7 @@ export const all_products = [
     image: hp_1,
     category: "electronics",
     sale: true,
-    ratings: 4.5,
+    ratings: 4,
   },
   {
     id: 11,
@@ -118,16 +117,7 @@ export const all_products = [
     sale: true,
     ratings: 4.5,
   },
-  {
-    id: 12,
-    name: "Apple iPhone 15, 128 GB Storage, Black",
-    old_price: 1200000.0,
-    discount: 0.2,
-    image: iphone_1,
-    category: "mobile",
-    sale: true,
-    ratings: 4.5,
-  },
+
   {
     id: 13,
     name: "Apple iPhone 15, 128 GB Storage, Black",
@@ -146,7 +136,7 @@ export const all_products = [
     image: iphone_3,
     category: "mobile",
     sale: true,
-    ratings: 4,
+    ratings: 4.6,
   },
   {
     id: 15,

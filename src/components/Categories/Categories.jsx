@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 const Categories = () => {
   return (
-    <div className=" py-20 md:px-28 bg-gray-100" id="categories">
+    <div className="px-8 py-20 md:px-28 bg-gray-100" id="categories">
       <h2 className="text-3xl text-slate-800 font-semibold mb-2">Explore Popular Categories</h2>
       <h3 className="text-lg text-gray-600">Find the perfect gear for your setup!</h3>
       <div>
