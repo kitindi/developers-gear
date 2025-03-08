@@ -4,7 +4,7 @@ import { Link } from "react-router";
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
   return (
-    <div className="flex justify-between items-center px-32 boder border-gray-200 py-4 shadow-sm">
+    <div className="flex justify-between items-center md:px-36 boder border-gray-200 py-4 shadow-sm">
       <div className="nav-logo flex items-center space-x-2">
         <span>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" color="#E02424" fill="none">
@@ -36,7 +36,7 @@ const Navbar = () => {
           </svg>
         </span>
         <p className="text-xl font-medium text-slate-900">
-          Dev Gears <hr className="border-none h-1 bg-white" />
+          TechGear Hub <hr className="border-none h-1 bg-white" />
         </p>
       </div>
       <ul className="flex items-center space-x-16">
@@ -51,15 +51,18 @@ const Navbar = () => {
           <Link to="mobile"> Mobile </Link>
           {menu === "mobile" ? <hr className="border-none h-1 bg-red-500" /> : <hr className="border-none h-1 bg-white" />}
         </li>
-        <li onClick={() => setMenu("living")} className="cursor-pointer">
-          <Link to="living">Home & Living </Link>
-          {menu === "living" ? <hr className="border-none h-1 bg-red-500" /> : <hr className="border-none h-1 bg-white" />}
+        <li onClick={() => setMenu("furniture")} className="cursor-pointer">
+          <Link to="furniture">Furniture</Link>
+          {menu === "furniture" ? <hr className="border-none h-1 bg-red-500" /> : <hr className="border-none h-1 bg-white" />}
         </li>
       </ul>
       <div className="flex items-center space-x-4">
-        <button className="px-12 py-2 rounded-full border border-red-300 cursor-pointer">Login</button>
+        <Link to="/login">
+          {" "}
+          <button className="px-12 py-2 rounded-full border border-red-300 cursor-pointer">Login</button>
+        </Link>
         <hr className="border-none h-1 bg-white" />
-        <div className="relative">
+        <Link to="/cart" className="relative">
           <p>
             {" "}
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34" color="#F05252" fill="none">
@@ -83,7 +86,7 @@ const Navbar = () => {
             <hr className="border-none h-1 bg-white" />
           </p>
           <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-xs">0</span>
-        </div>
+        </Link>
       </div>
     </div>
   );
