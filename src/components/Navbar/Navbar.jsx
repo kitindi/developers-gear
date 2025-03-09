@@ -5,7 +5,7 @@ const Navbar = () => {
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
   return (
     <div className="w-full flex space-x-10  items-center px-8 md:px-28 boder border-gray-200 py-4 shadow-sm">
-      <div className="flex items-center space-x-2">
+      <Link to="/" className="flex items-center space-x-2">
         <span>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" color="#E02424" fill="none">
             <path d="M15 9V15H9V9H15Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
@@ -36,7 +36,7 @@ const Navbar = () => {
           </svg>
         </span>
         <p className="text-xl font-semibold text-slate-900">TechGear Hub</p>
-      </div>
+      </Link>
       <div className="flex-grow flex  items-center gap-16 ">
         <ul className="flex items-center space-x-10">
           <li className="cursor-pointer">
@@ -47,7 +47,7 @@ const Navbar = () => {
             <button className="cursor-pointer">Shop By Categories</button>
             {megaMenuOpen && (
               <div
-                className="min-w-4xl absolute left-10 mt-0 bg-white text-black p-4 rounded-lg shadow-lg grid grid-cols-4 gap-2"
+                className="min-w-4xl absolute left-10 mt-0 bg-white text-black p-4 rounded-lg shadow-lg grid grid-cols-4 gap-2 items-center"
                 onMouseLeave={() => setMegaMenuOpen(false)}
               >
                 <div>
