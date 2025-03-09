@@ -14,9 +14,17 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Shop />} />
-          <Route path="/electronics" element={<ShopCategory category="electronics" />} />
-          <Route path="/mobile" element={<ShopCategory category="mobile" />} />
-          <Route path="/furniture" element={<ShopCategory category="furniture" />} />
+          <Route path="/monitor" element={<ShopCategory category="monitor" title="Computer Monitors, Projectors & Accessories" link="Monitors" />} />
+          <Route path="/keyboard_mice" element={<ShopCategory category="keyboard_mice" title="Computer Keyboards, Mice" link="Keyboards & Mice" />} />
+          <Route path="/headphones" element={<ShopCategory category="headphones" title="Portable Audio & Headphones" link="Headphones" />} />
+          <Route path="/laptop" element={<ShopCategory category="laptop" title="Laptop & Accessories" link="Laptops & Accessories" />} />
+          <Route path="/desktop_pc" element={<ShopCategory category="desktop_pc" title="Desktops & All-In-One Computers" link="Desktop PC" />} />
+          <Route
+            path="/cables_charger"
+            element={<ShopCategory category="cables_charger" title="Laptop Power Adapters & Chargers" link="Cables & Chargers" />}
+          />
+          <Route path="/desk_accessories" element={<ShopCategory category="desk_accessories" title="Office & Desk Accessories" link="Desk Accessories" />} />
+          <Route path="/apparel" element={<ShopCategory category="apparel" title="Developer & Tech Pro Outlook" link="Tech Pro Apparel" />} />
           <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
           </Route>
