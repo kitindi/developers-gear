@@ -67,7 +67,7 @@ export const all_products = [
   },
 
   {
-    id: 6,
+    id: 5,
     name: '2018+ Apple MacBook Air 13" Retina Touch ID 16GB RAM 256GB 3.6GHz i5',
     old_price: 2000000.0,
     discount: 0.2,
@@ -78,7 +78,7 @@ export const all_products = [
   },
 
   {
-    id: 8,
+    id: 6,
     name: "Apple Earpods With Remote & Mic",
     old_price: 30000.0,
     discount: 0.2,
@@ -88,7 +88,7 @@ export const all_products = [
     ratings: 4,
   },
   {
-    id: 9,
+    id: 7,
     name: "Apple Earpods With Remote&Mic",
     old_price: 30000.0,
     discount: 0.2,
@@ -98,7 +98,7 @@ export const all_products = [
     ratings: 4,
   },
   {
-    id: 10,
+    id: 8,
     name: 'HP Laptop 14", AMD Ryzen 3,8GB RAM,256GB SSD,Windows 11',
     old_price: 1500000.0,
     discount: 0.2,
@@ -108,7 +108,7 @@ export const all_products = [
     ratings: 4,
   },
   {
-    id: 11,
+    id: 9,
     name: 'HP Envy 17" FHD Touch Laptop - i7-13700H, 64GB RAM, 258 SSD NVMe, Windows 11',
     old_price: 2200000.0,
     discount: 0.2,
@@ -119,7 +119,7 @@ export const all_products = [
   },
 
   {
-    id: 13,
+    id: 10,
     name: "Apple iPhone 15, 128 GB Storage, Black",
     old_price: 1200000.0,
     discount: 0.2,
@@ -129,7 +129,7 @@ export const all_products = [
     ratings: 4,
   },
   {
-    id: 14,
+    id: 11,
     name: "Apple iPhone 15, 128 GB Storage, Black",
     old_price: 1200000.0,
     discount: 0.2,
@@ -139,7 +139,7 @@ export const all_products = [
     ratings: 4.6,
   },
   {
-    id: 15,
+    id: 12,
     name: "ALenovo Ideapad 1,15.6' AMD Ryzen 7,16GB RAM,512GB SSD, Windows 11,Grey",
     old_price: 2200000.0,
     discount: 0.2,
@@ -149,7 +149,7 @@ export const all_products = [
     ratings: 4,
   },
   {
-    id: 16,
+    id: 13,
     name: "ALenovo Ideapad 1,15.6' AMD Ryzen 7,16GB RAM,512GB SSD, Windows 11,Grey",
     old_price: 2200000.0,
     discount: 0.2,
@@ -160,7 +160,7 @@ export const all_products = [
   },
 
   {
-    id: 17,
+    id: 14,
     name: "Samsung Galaxy S22 SM-S901B/DS - 128GB, 8GB RAM, 5G",
     old_price: 900000.0,
     image: s22,
@@ -170,7 +170,7 @@ export const all_products = [
     ratings: 4.5,
   },
   {
-    id: 18,
+    id: 15,
     name: "2024 NEW S23 Ultra Android 4GB+128GB Smartphone Unlocked 6800mAh Dual SIM",
     old_price: 25000000.0,
     image: s23_ultra,
@@ -180,7 +180,7 @@ export const all_products = [
     ratings: 4,
   },
   {
-    id: 19,
+    id: 16,
     name: 'Samsung Galaxy S25 Ultra 5G S938 6.8"LTPO 12/256GB SD8 Elite 5000mAh',
     old_price: 1400000.0,
     discount: 0.2,
@@ -190,7 +190,7 @@ export const all_products = [
     ratings: 4.5,
   },
   {
-    id: 20,
+    id: 17,
     name: 'Samsung Galaxy S25 Ultra 5G S938 6.8"LTPO 12/256GB SD8 Elite 5000mAh',
     old_price: 1400000.0,
     discount: 0.2,
@@ -200,7 +200,7 @@ export const all_products = [
     ratings: 4,
   },
   {
-    id: 21,
+    id: 18,
     name: "Sony WH-1000XM4 Noise-Canceling Headphones Black",
     old_price: 700000.0,
     discount: 0.2,
@@ -211,7 +211,7 @@ export const all_products = [
   },
 
   {
-    id: 23,
+    id: 19,
     name: "Sony WH-1000XM4 Noise-Canceling Headphones Black",
     old_price: 700000.0,
     discount: 0.2,
@@ -221,7 +221,7 @@ export const all_products = [
     ratings: 4,
   },
   {
-    id: 24,
+    id: 20,
     name: "Sony WH-1000XM4 Noise-Canceling Headphones Black",
     old_price: 700000.0,
     discount: 0.2,
@@ -231,7 +231,7 @@ export const all_products = [
     ratings: 4,
   },
   {
-    id: 25,
+    id: 21,
     name: "Electric Standing Desk, Adjustable Height Stand up Desk Home Office Desk",
     old_price: 700000.0,
     discount: 0.2,
@@ -241,7 +241,7 @@ export const all_products = [
     ratings: 4,
   },
   {
-    id: 26,
+    id: 22,
     name: "Electric Standing Desk, Adjustable Height Stand up Desk Home Office Desk",
     old_price: 700000.0,
     discount: 0.2,

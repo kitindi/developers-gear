@@ -1,8 +1,11 @@
 import { Link } from "react-router";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ShopContext } from "../../context/ShopContext";
 
 const Navbar = () => {
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
+  const { cartItems } = useContext(ShopContext);
+  const totalItems = Object.values(cartItems).reduce((acc, item) => acc + item, 0);
   return (
     <div className="w-full flex space-x-10  items-center px-8 md:px-28 boder border-gray-200 py-4 shadow-sm">
       <Link to="/" className="flex items-center space-x-2">
@@ -242,7 +245,7 @@ const Navbar = () => {
             </svg>
             <hr className="border-none h-1 bg-white" />
           </p>
-          <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-xs">0</span>
+          <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-xs">{totalItems}</span>
         </Link>
       </div>
     </div>

@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router";
 import Shop from "./pages/Shop";
 import ShopCategory from "./pages/ShopCategory";
-import Product from "./pages/Product";
+
 import Cart from "./pages/Cart";
 import LoginSignUp from "./pages/LoginSignUp";
 import Footer from "./components/Footer/Footer";
@@ -25,9 +25,7 @@ function App() {
           />
           <Route path="/desk_accessories" element={<ShopCategory category="desk_accessories" title="Office & Desk Accessories" link="Desk Accessories" />} />
           <Route path="/apparel" element={<ShopCategory category="apparel" title="Developer & Tech Pro Outlook" link="Tech Pro Apparel" />} />
-          <Route path="/product" element={<Product />}>
-            <Route path=":productId" element={<Product />} />
-          </Route>
+
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginSignUp />} />
         </Routes>

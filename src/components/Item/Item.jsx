@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ShopContext } from "../../context/shopContext";
 
 const Item = ({ product }) => {
+  const { addToCart } = useContext(ShopContext);
   return (
     <div className="grid grid-cols-2 space-x-4 border border-gray-200 p-2.5 rounded-lg">
       <div className="">
@@ -25,7 +27,14 @@ const Item = ({ product }) => {
           )}
         </div>
         <div className="py-3">
-          <button className="bg-red-500 hover:bg-red-400 px-8 py-2 rounded-full text-white font-medium text-xs">Add to Cart</button>
+          <button
+            onClick={() => {
+              addToCart(product.id);
+            }}
+            className="bg-red-500 hover:bg-red-400 px-8 py-2 rounded-full text-white font-medium text-xs cursor-pointer"
+          >
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
