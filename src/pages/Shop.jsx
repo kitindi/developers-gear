@@ -8,11 +8,11 @@ import Faq from "../components/FAQ/Faq";
 const Shop = () => {
   return (
     <div>
-      <div className="px-8 md:px-28">
+      <div className="px-4 md:px-12 lg:px-28">
         <Hero />
       </div>
       <Categories />
-      <div className="px-8 md:px-28">
+      <div className="px-4 md:px-12 lg:px-28">
         <BestSell />
         <Faq />
       </div>

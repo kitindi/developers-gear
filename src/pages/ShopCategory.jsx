@@ -24,7 +24,7 @@ const ShopCategory = ({ category, title, link }) => {
     );
   }
   return (
-    <div className="md:px-28 px-8 min-h-screen">
+    <div className="md:px-12 lg:px-28 px-8 min-h-screen">
       <div className="">
         <div className="py-8">
           <ul className="flex items-center text-gray-500 text-sm space-x-2">
@@ -36,7 +36,7 @@ const ShopCategory = ({ category, title, link }) => {
         <h1 className="text-2xl md:text-3xl font-medium text-gray-700 ">{title}</h1>
       </div>
       <div className="">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-5 py-10">
           {bestSale.map((product) => {
             return <Item key={product.id} product={product} />;
           })}

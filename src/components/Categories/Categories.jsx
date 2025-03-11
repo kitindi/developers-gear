@@ -3,11 +3,11 @@ import { Link } from "react-router";
 
 const Categories = () => {
   return (
-    <div className="px-8 py-20 md:px-28 bg-gray-100" id="categories">
+    <div className="px-8 py-20 md:px-12 lg:px-28 bg-gray-100" id="categories">
       <h2 className="text-3xl text-slate-800 font-semibold mb-2">Explore Popular Categories</h2>
       <h3 className="text-lg text-gray-600">Find the perfect gear for your setup!</h3>
       <div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-5 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 py-8">
           <Link to="/keyboard_mice" className=" p-3 bg-gray-100 hover:bg-white  rounded-lg  flex items-center space-x-5">
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#e02424" viewBox="0 0 256 256">
@@ -53,10 +53,6 @@ const Categories = () => {
               <p className="text-xs text-gray-600"> Powerful, tech-friendly laptops for seamless work</p>
             </div>
           </Link>
-        </div>
-      </div>
-      <div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-5 py-8">
           <Link to="/desktop_pc" className="p-4 bg-gray-100 hover:bg-white  rounded-lg  flex items-center space-x-5">
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#e02424" viewBox="0 0 256 256">
@@ -148,6 +144,9 @@ const Categories = () => {
             </div>
           </Link>
         </div>
+      </div>
+      <div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-5 py-8"></div>
       </div>
     </div>
   );

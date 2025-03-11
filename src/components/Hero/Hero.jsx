@@ -4,12 +4,12 @@ import { Link } from "react-router";
 
 const Hero = () => {
   return (
-    <div className="grid grid-cols-2 gap-10 py-28">
-      <div className="col-span-2 md:col-span-1  gap-8 flex flex-col justify-center">
-        <h1 className="text-5xl font-semibold text-gray-800">
+    <div className="grid grid-cols-1 md:grid-cols-2 md:gap-5 lg:gap-10 py-28">
+      <div className="  gap-8 flex flex-col justify-center">
+        <h1 className="text-4xl lg:text-5xl font-semibold text-gray-800">
           Elevate Your Game with <span className="text-red-500">Premium</span> Tech Accessories
         </h1>
-        <p className="text-2xl font-medium text-gray-500 py-4">
+        <p className="text-xl md:text-2xl font-medium text-gray-500 py-4">
           Your one-stop shop for premium tech accessories designed specifically for software engineers and tech professionals
         </p>
 
@@ -31,7 +31,7 @@ const Hero = () => {
           </li>
         </ul>
       </div>
-      <div className="col-span-2 md:col-span-1 flex flex-col justify-center  py-10">
+      <div className=" flex flex-col justify-center  py-5">
         <img src={heroImage} alt="" />
         {/* <button className="bg-red-500 text-white text-lg font-medium px-8 py-2 rounded-full max-w-[220px]">Shop now</button> */}
       </div>
