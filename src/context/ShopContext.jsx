@@ -19,8 +19,6 @@ const ShopContextProvider = ({ children }) => {
     setCartItems((prevCartItems) => {
       return { ...prevCartItems, [itemIndex]: prevCartItems[itemIndex] + 1 };
     });
-
-    console.log(cartItems);
   };
 
   const removeFromCart = (itemIndex) => {
@@ -29,7 +27,16 @@ const ShopContextProvider = ({ children }) => {
     });
   };
 
-  const contextValue = { all_products, cartItems, setCartItems, cartOpen, setCartOpen, addToCart, removeFromCart };
+  // calculate total cart amount
+
+  const getTotalCartAmount = () => {
+    let total = 0;
+    for (let index = 0; index < all_products.length; index++) {
+      total += all_products[index].old_price * cartItems[index] * (1 - all_products[index].discount);
+    }
+    return total;
+  };
+  const contextValue = { all_products, cartItems, setCartItems, cartOpen, setCartOpen, addToCart, removeFromCart, getTotalCartAmount };
   return <ShopContext.Provider value={contextValue}>{children}</ShopContext.Provider>;
 };
 

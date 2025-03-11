@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { ShopContext } from "../../context/ShopContext";
 
 const CartItems = () => {
-  const { all_products, cartItems, removeFromCart } = useContext(ShopContext);
+  const { all_products, cartItems, removeFromCart, getTotalCartAmount } = useContext(ShopContext);
   return (
     <div>
       <div className="grid grid-cols-6 gap-4 pt-8">
@@ -13,14 +13,14 @@ const CartItems = () => {
         <p className="text-md font-medium text-gray-600">Total</p>
         <p className="text-md font-medium text-gray-600 ">Remove</p>
       </div>
-      <hr />
+      <hr className="bg-gray-200 h-0.5 border-none mt-2" />
       <div>
         {all_products.map((product, index) => {
           const quantity = cartItems[index];
           if (quantity > 0) {
             return (
-              <div key={index} className="grid grid-cols-6 gap-4 py-8 items-center border-b border-gray-200">
-                <img src={product.image} alt={product.name} className="w-40" />
+              <div key={index} className="grid grid-cols-6 gap-4 py-2 items-center min-h-52">
+                <img src={product.image} alt={product.name} className="w-36" />
                 <p className="text-gray-600 text-sm">{product.name}</p>
                 <p className="text-gray-600 text-sm">Tsh. {product.old_price}</p>
                 <p className="text-gray-600 text-sm">{quantity}</p>
@@ -43,9 +43,11 @@ const CartItems = () => {
           return null;
         })}
       </div>
-      <div>
-        <p className="text-gray-600 text-sm">Cart Total: Tsh. 0</p>
-        <button className="bg-blue-500 text-white px-4 py-2 rounded">Checkout</button>
+
+      <hr className="bg-gray-200 h-0.5 border-none my-2" />
+      <div className="flex flex-col items-end my-5">
+        <p className="text-gray-600 text-md font-medium mb-4">Cart Total: Tsh. {getTotalCartAmount()}</p>
+        <button className="bg-red-500 text-white px-4 py-2 rounded cursor-pointer">Checkout</button>
       </div>
     </div>
   );
