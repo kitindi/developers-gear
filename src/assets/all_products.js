@@ -22,6 +22,28 @@ import sony_3 from "./sony_3.png";
 import table_1 from "./table_1.png";
 import table_2 from "./table_2.png";
 
+import yasbymix from "./yasbymix.png";
+import mpesa from "./mpesa.png";
+import airtelmoney from "./airtelmoney.png";
+
+export const paymentMethod = [
+  {
+    service_provider: "airtel",
+    logo: airtelmoney,
+    lipaNumber: 1234567,
+  },
+  {
+    service_provider: "voda",
+    logo: mpesa,
+    lipaNumber: 1234567,
+  },
+  {
+    service_provider: "yas",
+    logo: yasbymix,
+    lipaNumber: 1234567,
+  },
+];
+
 export const all_products = [
   {
     id: 1,

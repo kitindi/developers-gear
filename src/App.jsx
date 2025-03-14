@@ -8,6 +8,7 @@ import Cart from "./pages/Cart";
 import LoginSignUp from "./pages/LoginSignUp";
 import Footer from "./components/Footer/Footer";
 import SignupPage from "./pages/Signup";
+import Payment from "./pages/Payment";
 function App() {
   return (
     <div className="relative">
@@ -30,6 +31,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginSignUp />} />
           <Route path="/register" element={<SignupPage />} />
+          <Route path="/payment" element={<Payment />} />
         </Routes>
         <Footer />
       </BrowserRouter>

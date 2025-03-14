@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../../context/ShopContext";
+import { Link } from "react-router";
 
 const CartItems = () => {
   const { all_products, cartItems, removeFromCart, getTotalCartAmount } = useContext(ShopContext);
@@ -47,7 +48,9 @@ const CartItems = () => {
       <hr className="bg-gray-200 h-0.5 border-none my-2" />
       <div className="flex flex-col items-end my-5">
         <p className="text-gray-600 text-md font-medium mb-4">Cart Total: Tsh. {getTotalCartAmount()}</p>
-        <button className="bg-red-500 text-white px-4 py-2 rounded cursor-pointer">Checkout</button>
+        <Link to="/payment" className="bg-red-500 text-white px-12 py-2 rounded-full cursor-pointer">
+          Continue to Pay
+        </Link>
       </div>
     </div>
   );

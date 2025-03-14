@@ -229,6 +229,7 @@ const Navbar = () => {
             {" "}
             <button className="px-12 py-2 rounded-full border border-red-300 cursor-pointer">Login</button>
           </Link>
+          <p>Jumbe</p>
           <hr className="border-none h-1 bg-white" />
           <Link to="/cart" className="relative">
             <p>
