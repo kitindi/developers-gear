@@ -1,11 +1,12 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { useContext, useState } from "react";
 import { ShopContext } from "../../context/ShopContext";
 
 const Navbar = () => {
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const location = useLocation();
+  const { pathname } = location;
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -225,10 +226,19 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center space-x-4">
-          <Link to="/login">
-            {" "}
-            <button className="px-12 py-2 rounded-full border border-red-300 cursor-pointer">Login</button>
-          </Link>
+          {(pathname === "/login") |
+          (pathname === "/register") |
+          (pathname === "/cart") |
+          (pathname === "/payment") |
+          (pathname === "/seller-login") |
+          (pathname === "/seller-register") ? (
+            ""
+          ) : (
+            <Link to="/login">
+              {" "}
+              <button className="px-12 py-2 rounded-full border border-red-300 cursor-pointer">Login</button>
+            </Link>
+          )}
           <p>Jumbe</p>
           <hr className="border-none h-1 bg-white" />
           <Link to="/cart" className="relative">

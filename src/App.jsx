@@ -9,6 +9,8 @@ import LoginSignUp from "./pages/LoginSignUp";
 import Footer from "./components/Footer/Footer";
 import SignupPage from "./pages/Signup";
 import Payment from "./pages/Payment";
+import SellerLogin from "./pages/SellerLogin";
+import SellerRegister from "./pages/SellerRegister";
 function App() {
   return (
     <div className="relative">
@@ -32,6 +34,8 @@ function App() {
           <Route path="/login" element={<LoginSignUp />} />
           <Route path="/register" element={<SignupPage />} />
           <Route path="/payment" element={<Payment />} />
+          <Route path="/seller-login" element={<SellerLogin />} />
+          <Route path="/seller-register" element={<SellerRegister />} />
         </Routes>
         <Footer />
       </BrowserRouter>

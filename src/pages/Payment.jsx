@@ -2,9 +2,9 @@ import { paymentMethod } from "../assets/all_products.js";
 
 const Payment = () => {
   return (
-    <div className="px-4 md:px-12 lg:px-28 min-h-screen py-10">
-      <div className="grid  grid-cols-1 md:grid-cols-5 gap-16">
-        <div className="md:col-span-3">
+    <div className="px-4 md:px-12 lg:px-28 min-h-screen py-10 ">
+      <div className="grid  grid-cols-1 md:grid-cols-5 gap-16 ">
+        <div className="md:col-span-3 border-r-2 border-gray-100 pr-8">
           <h2 className="text-3xl font-bold text-gray-800">Shipping</h2>
           <div className="pt-8">
             <form method="POST">
@@ -117,13 +117,40 @@ const Payment = () => {
                 type="submit"
                 className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-full text-sm w-full sm:w-auto px-10 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800 cursor-pointer"
               >
-                Pay
+                Pay and Submit
               </button>
             </form>
           </div>
         </div>
-        <div className="md:col-span-2">
-          <div className="bg-gray-100 p-5"></div>
+        <div className="md:col-span-2  pl-8">
+          <div className=" py-5 px-16">
+            <h2 className="text-xl font-bold text-gray-800">Order Summary</h2>
+            <div className="grid grid-cols-2 py-10">
+              <div>
+                <h3 className="text-md font-semibold text-gray-500">Balance Amout</h3>
+              </div>
+              <div>
+                <h3 className="text-md font-semibold text-gray-500">Tsh 20000</h3>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 pb-4">
+              <div>
+                <h3 className="text-sm font-semibold text-gray-500">VAT (18%)</h3>
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold text-gray-500">Tsh 2000</h3>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 py-3">
+              <div>
+                <h3 className="text-md font-semibold text-gray-500">Total</h3>
+                <p className="text-gray-500 text-xs">(Inc VAT)</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800">Tsh 22000</h3>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

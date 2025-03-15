@@ -43,7 +43,7 @@ const Footer = () => {
             <Link to="" className="text-sm text-gray-600 block py-1">
               Affiliate program
             </Link>
-            <Link to="" className="text-sm text-gray-600 block py-1">
+            <Link to="/seller-login" className="text-sm text-gray-600 block py-1">
               Seller Log In
             </Link>
           </ul>
