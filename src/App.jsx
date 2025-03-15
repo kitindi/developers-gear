@@ -11,6 +11,7 @@ import SignupPage from "./pages/Signup";
 import Payment from "./pages/Payment";
 import SellerLogin from "./pages/SellerLogin";
 import SellerRegister from "./pages/SellerRegister";
+import Search from "./pages/Search";
 function App() {
   return (
     <div className="relative">
@@ -36,6 +37,7 @@ function App() {
           <Route path="/payment" element={<Payment />} />
           <Route path="/seller-login" element={<SellerLogin />} />
           <Route path="/seller-register" element={<SellerRegister />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
         <Footer />
       </BrowserRouter>
