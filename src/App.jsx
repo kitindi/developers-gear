@@ -1,9 +1,7 @@
 import Navbar from "./components/Navbar/Navbar";
-
 import { BrowserRouter, Routes, Route } from "react-router";
 import Shop from "./pages/Shop";
 import ShopCategory from "./pages/ShopCategory";
-
 import Cart from "./pages/Cart";
 import LoginSignUp from "./pages/LoginSignUp";
 import Footer from "./components/Footer/Footer";
@@ -12,13 +10,27 @@ import Payment from "./pages/Payment";
 import SellerLogin from "./pages/SellerLogin";
 import SellerRegister from "./pages/SellerRegister";
 import Search from "./pages/Search";
+import ProtectedRoute from "../ProtectedRoute";
+
 function App() {
   return (
     <div className="relative">
       <BrowserRouter>
         <Navbar />
         <Routes>
+          {/* Default route */}
           <Route path="/" element={<Shop />} />
+          {/* protected route */}
+          <Route element={<ProtectedRoute />}>
+            <Route path="/payment" element={<Payment />} />
+          </Route>
+          {/* Public routes */}
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<LoginSignUp />} />
+          <Route path="/register" element={<SignupPage />} />
+          <Route path="/seller-login" element={<SellerLogin />} />
+          <Route path="/seller-register" element={<SellerRegister />} />
+          <Route path="/search" element={<Search />} />
           <Route path="/monitor" element={<ShopCategory category="monitor" title="Computer Monitors, Projectors & Accessories" link="Monitors" />} />
           <Route path="/keyboard_mice" element={<ShopCategory category="keyboard_mice" title="Computer Keyboards, Mice" link="Keyboards & Mice" />} />
           <Route path="/headphones" element={<ShopCategory category="headphones" title="Portable Audio & Headphones" link="Headphones" />} />
@@ -30,14 +42,6 @@ function App() {
           />
           <Route path="/desk_accessories" element={<ShopCategory category="desk_accessories" title="Office & Desk Accessories" link="Desk Accessories" />} />
           <Route path="/apparel" element={<ShopCategory category="apparel" title="Developer & Tech Pro Outlook" link="Tech Pro Apparel" />} />
-
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/login" element={<LoginSignUp />} />
-          <Route path="/register" element={<SignupPage />} />
-          <Route path="/payment" element={<Payment />} />
-          <Route path="/seller-login" element={<SellerLogin />} />
-          <Route path="/seller-register" element={<SellerRegister />} />
-          <Route path="/search" element={<Search />} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -1,6 +1,10 @@
 import { paymentMethod } from "../assets/all_products.js";
 
 const Payment = () => {
+  const handlePayment = () => {
+    localStorage.removeItem("token");
+    window.location.href = "/"; // Redirect to the login page
+  };
   return (
     <div className="px-4 md:px-12 lg:px-28 min-h-screen py-10 ">
       <div className="grid  grid-cols-1 md:grid-cols-5 gap-16 ">
@@ -82,17 +86,28 @@ const Payment = () => {
                     required
                   />
                 </div>
-                <div>
+                <div className="col-span-2">
                   <label for="website" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     Select Payment Method
                   </label>
-                  <div className="flex  items-center gap-12 py-3">
-                    <img src={paymentMethod[0].logo} alt="" className="w-20 cursor-pointer" />
-                    <img src={paymentMethod[1].logo} alt="" className="w-20 cursor-pointer" />
-                    <img src={paymentMethod[2].logo} alt="" className="w-20 cursor-pointer" />
+                  <div className="w-full flex  items-center gap-12 py-3  ">
+                    <div>
+                      {" "}
+                      <img src={paymentMethod[0].logo} alt="" className="w-20 cursor-pointer" />
+                      <p className="text-xs font-bold text-gray-600 py-4">9288292992</p>
+                    </div>
+                    <div>
+                      {" "}
+                      <img src={paymentMethod[1].logo} alt="" className="w-20 cursor-pointer" />
+                      <p className="text-xs font-bold text-gray-600 py-4">9288292992</p>
+                    </div>
+                    <div>
+                      {" "}
+                      <img src={paymentMethod[2].logo} alt="" className="w-16 cursor-pointer" />
+                      <p className="text-xs font-bold text-gray-600 py-4">9288292992</p>
+                    </div>
                   </div>
                 </div>
-                <div></div>
               </div>
 
               <div className="flex items-start mb-6">
@@ -106,14 +121,11 @@ const Payment = () => {
                   />
                 </div>
                 <label for="remember" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                  I agree with the{" "}
-                  <a href="#" className="text-blue-600 hover:underline dark:text-blue-500">
-                    terms and conditions
-                  </a>
-                  .
+                  Set my address as default .
                 </label>
               </div>
               <button
+                onClick={handlePayment}
                 type="submit"
                 className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-full text-sm w-full sm:w-auto px-10 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800 cursor-pointer"
               >

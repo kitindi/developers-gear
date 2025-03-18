@@ -5,47 +5,54 @@ import axios from "axios";
 const LoginSignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (email === "") {
-      setErrorMessage("Please provide your email");
+      setError("Please provide your email");
       return null;
     }
     if (password === "") {
-      setErrorMessage("Please provide password");
+      setError("Please provide password");
       return null;
     }
-    setErrorMessage("");
-    await axios
-      .post("http://localhost:4000/api/auth/user-login", {
-        email: email,
-        password: password,
-      })
-      .then((response) => {
-        console.log("Response:", response.data);
-      })
-      .catch((error) => {
-        if (error.response) {
-          // The request was made and the server responded with a status code
-          console.error("Error Status Code:", error.response.status);
-          console.error("Error Data:", error.response.data.message);
-          // Set the error message in state
-          setErrorMessage(error.response.data.message);
-        } else if (error.request) {
-          // The request was made but no response was received
-          console.error("No response received:", error.request);
-          setErrorMessage("No response received from the server.");
-        } else {
-          // Something happened in setting up the request
-          console.error("Request Error:", error.message);
-          setErrorMessage("An error occurred while setting up the request.");
-        }
-      });
-    setEmail("");
-    setPassword("");
+    setError("");
+
+    try {
+      // Send a POST request using Axios
+      const response = await axios.post("http://localhost:4000/api/auth/user-login", { email, password });
+
+      // console.log("Login successful:", response.data);
+      setEmail("");
+      setPassword("");
+      // Store the JWT in localStorage
+      localStorage.setItem("token", response.data.token); // Assuming the token is in response.data.token
+      console.log("Login successful:", response.data);
+
+      // Redirect the user to a protected route (payment page)
+      window.location.href = "/payment";
+
+      // Handle successful login (e.g., redirect or update state)
+    } catch (err) {
+      // Handle errors
+      if (err.response) {
+        // The request was made and the server responded with a status code
+        // that falls out of the range of 2xx
+        console.error("Error Status Code:", err.response.status);
+        console.error("Error Data:", err.response.data);
+        setError(err.response.data.msg || "Invalid credentials"); // Set the error message from the server
+      } else if (err.request) {
+        // The request was made but no response was received
+        console.error("No response received:", err.request);
+        setError("Network error. Please try again.");
+      } else {
+        // Something happened in setting up the request
+        console.error("Error:", err.message);
+        setError("An unexpected error occurred.");
+      }
+    }
   };
   return (
     <div className="px-4 md:px-12 lg:px-28 min-h-96 py-8 lg:py-4">
@@ -85,7 +92,7 @@ const LoginSignUp = () => {
                     required=""
                   />
                 </div>
-                <div class="flex items-center justify-between">{errorMessage && <p className="text-xs text-red-400">{errorMessage}</p>}</div>
+                <div class="flex items-center justify-between">{error && <p className="text-xs text-red-400">{error}</p>}</div>
                 <button
                   type="submit"
                   class="w-full text-white bg-red-600 hover:bg-red-700  font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700  cursor-pointer"
