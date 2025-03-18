@@ -32,7 +32,7 @@ const LoginSignUp = () => {
       console.log("Login successful:", response.data);
 
       // Redirect the user to a protected route (payment page)
-      window.location.href = "/payment";
+      window.location.href = "/";
 
       // Handle successful login (e.g., redirect or update state)
     } catch (err) {

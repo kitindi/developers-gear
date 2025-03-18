@@ -12,7 +12,7 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const { cartItems } = useContext(ShopContext);
+  const { cartItems, username } = useContext(ShopContext);
   const totalItems = Object.values(cartItems).reduce((acc, item) => acc + item, 0);
   return (
     <div>
@@ -219,12 +219,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center space-x-4">
-          {(pathname === "/login") |
-          (pathname === "/register") |
-          (pathname === "/cart") |
-          (pathname === "/payment") |
-          (pathname === "/seller-login") |
-          (pathname === "/seller-register") ? (
+          {username ? (
             ""
           ) : (
             <Link to="/login">
@@ -232,7 +227,7 @@ const Navbar = () => {
               <button className="px-12 py-2 rounded-full border border-red-300 cursor-pointer">Login</button>
             </Link>
           )}
-          <p>Jumbe</p>
+          <p>{username ? username : ""}</p>
           <hr className="border-none h-1 bg-white" />
           <Link to="/cart" className="relative">
             <p>
