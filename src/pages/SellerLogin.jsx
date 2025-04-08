@@ -22,7 +22,7 @@ const LoginSignUp = () => {
 
     try {
       // Send a POST request using Axios
-      const response = await axios.post("http://localhost:4000/api/auth/user-login", { email, password });
+      const response = await axios.post("http://localhost:4000/api/seller/login", { email, password });
 
       // console.log("Login successful:", response.data);
       setEmail("");
@@ -32,7 +32,7 @@ const LoginSignUp = () => {
       console.log("Login successful:", response.data);
 
       // Redirect the user to a protected route (payment page)
-      window.location.href = "/";
+      window.location.href = "/seller-dashboard";
 
       // Handle successful login (e.g., redirect or update state)
     } catch (err) {

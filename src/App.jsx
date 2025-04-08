@@ -11,6 +11,7 @@ import SellerLogin from "./pages/SellerLogin";
 import SellerRegister from "./pages/SellerRegister";
 import Search from "./pages/Search";
 import ProtectedRoute from "../ProtectedRoute";
+import SellerDashboard from "./pages/SellerDashboard";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           {/* protected route */}
           <Route element={<ProtectedRoute />}>
             <Route path="/payment" element={<Payment />} />
+            <Route path="/seller-dashboard" element={<SellerDashboard />} />
           </Route>
           {/* Public routes */}
           <Route path="/cart" element={<Cart />} />
