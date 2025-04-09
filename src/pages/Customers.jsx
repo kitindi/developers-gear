@@ -1,7 +1,7 @@
 import React from "react";
 import Sidebar from "../components/Sidebar/Sidebar";
 
-const SellerDashboard = () => {
+const Customers = () => {
   return (
     <div className="w-full min-h-screen px-4 md:px-12 lg:px-28 bg-gray-100">
       <div className="grid grid-cols-12">
@@ -59,4 +59,4 @@ const SellerDashboard = () => {
   );
 };
 
-export default SellerDashboard;
+export default Customers;

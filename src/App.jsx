@@ -12,6 +12,9 @@ import SellerRegister from "./pages/SellerRegister";
 import Search from "./pages/Search";
 import ProtectedRoute from "../ProtectedRoute";
 import SellerDashboard from "./pages/SellerDashboard";
+import Orders from "./pages/Orders";
+import Customers from "./pages/Customers";
+import Inventory from "./pages/Inventory";
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
           <Route element={<ProtectedRoute />}>
             <Route path="/payment" element={<Payment />} />
             <Route path="/seller-dashboard" element={<SellerDashboard />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/customers" element={<Customers />} />
+            <Route path="/inventory" element={<Inventory />} />
           </Route>
           {/* Public routes */}
           <Route path="/cart" element={<Cart />} />

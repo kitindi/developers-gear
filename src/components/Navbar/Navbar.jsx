@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router";
+import { Link } from "react-router";
 import { useContext, useState } from "react";
 import { ShopContext } from "../../context/ShopContext";
 import SearchForm from "../SearchForm/SearchForm";
@@ -90,7 +90,7 @@ const Navbar = () => {
                   stroke-linejoin="round"
                 />
               </svg>
-              <span className="text-sm text-gray-500 font-medium">Dashboard</span>
+              <span className="text-sm text-gray-600 font-medium">Dashboard</span>
             </Link>
           )}
         </div>
@@ -281,10 +281,10 @@ const Navbar = () => {
                 {" "}
                 <span>{`${username[0].toUpperCase()}`}</span>
               </p>
-              <div className="absolute top-full bg-white px-5 py-2  hidden group-hover:block  text-white text-sm font-medium max-w-2xl">
-                <ul className="flex flex-col gap-4 py-2 text-gray-600">
+              <div className="absolute top-full bg-white  py-2 px-5 hidden group-hover:block  text-white text-sm font-medium max-w-2xl">
+                <ul className="flex flex-col gap-1 py-2 text-gray-600">
                   <li
-                    className="flex items-center gap-2"
+                    className="flex items-center gap-2 hover:bg-gray-100 py-2 px-5 rounded-md cursor-pointer"
                     onClick={() => {
                       handleLogout();
                     }}
@@ -307,7 +307,7 @@ const Navbar = () => {
                     </span>
                     <span className="text-sm">Logout</span>
                   </li>
-                  <li className="flex items-center gap-2">
+                  <li className="flex items-center gap-2 hover:bg-gray-100 py-2 px-5 rounded-md cursor-pointer">
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" color="#f06b6b" fill="none">
                         <path
