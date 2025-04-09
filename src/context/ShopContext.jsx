@@ -14,7 +14,7 @@ const getDefaultCart = () => {
 
 const ShopContextProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
-  const [username, setUserName] = useState("");
+  const [userData, setUserData] = useState({ username: "", role: "" });
   const [cartOpen, setCartOpen] = useState(false);
   const [products, setProducts] = useState([]);
 
@@ -49,7 +49,7 @@ const ShopContextProvider = ({ children }) => {
 
     try {
       const decoded = jwtDecode(token);
-      return decoded.username;
+      return { name: decoded.name, role: decoded?.role }; // Assuming the user's name is stored in the token as "name"
       // Assuming the user's name is stored in the token as "name"
       // console.log(decoded);
     } catch (err) {
@@ -74,15 +74,28 @@ const ShopContextProvider = ({ children }) => {
 
   // Fetch the user's name from the token when the component mounts
   useEffect(() => {
-    const username = getUserNameFromToken();
-    if (username) {
-      setUserName(username);
+    const data = getUserNameFromToken();
+    if (data) {
+      setUserData({ username: data.name, role: data.role });
     }
     getAllProducts();
   }, []);
 
-  console.log(username);
-  const contextValue = { all_products, products, cartItems, setCartItems, cartOpen, setCartOpen, addToCart, removeFromCart, getTotalCartAmount, username };
+  console.log("User Data:", userData);
+  const { username, role } = userData;
+  const contextValue = {
+    all_products,
+    products,
+    cartItems,
+    setCartItems,
+    cartOpen,
+    setCartOpen,
+    addToCart,
+    removeFromCart,
+    getTotalCartAmount,
+    username,
+    role,
+  };
   return <ShopContext.Provider value={contextValue}>{children}</ShopContext.Provider>;
 };
 
