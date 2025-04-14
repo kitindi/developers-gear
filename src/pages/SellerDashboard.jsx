@@ -1,5 +1,6 @@
 import React from "react";
 import Sidebar from "../components/Sidebar/Sidebar";
+import Transactions from "../components/transactionTable/transactions";
 
 const SellerDashboard = () => {
   return (
@@ -50,30 +51,10 @@ const SellerDashboard = () => {
               </div>
             </div>
           </div>
-          <div className="mt-5 w-full bg-white rounded-md">
-            <h2 className="text-sm font-medium text-gray-500 py-4 px-8">Transactions</h2>
-            <div>
-              <table className="w-full table-auto">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="text-left text-sm font-medium text-gray-500 py-4 px-8">Transaction ID</th>
-                    <th className="text-left text-sm font-medium text-gray-500 py-4 px-8">Date</th>
-                    <th className="text-left text-sm font-medium text-gray-500 py-4 px-8">Amount</th>
-                    <th className="text-left text-sm font-medium text-gray-500 py-4 px-8">Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {/* Sample data */}
-                  {[...Array(10)].map((_, index) => (
-                    <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
-                      <td className="py-4 px-8 text-[11px]">TRX-{index + 1}</td>
-                      <td className="py-4 px-8 text-[11px]">2023-10-{index + 1}</td>
-                      <td className="py-4 px-8 text-[11px]">Tsh {1000 * (index + 1)}</td>
-                      <td className="py-4 px-8 text-[11px]">{index % 2 === 0 ? "Completed" : "Pending"}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+          <div className="mt-5 w-full bg-white rounded-md my-5">
+            <h2 className="text-md font-medium text-gray-500 pt-4 px-8">Transactions</h2>
+            <div className="overflow-x-auto px-8 py-4">
+              <Transactions />
             </div>
           </div>
         </div>

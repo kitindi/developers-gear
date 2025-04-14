@@ -1,0 +1,22 @@
+[
+  { "TransactionID": 1, "Date": "14/10/2024", "Amount": 44295.69, "Status": true },
+  { "TransactionID": 2, "Date": "13/04/2024", "Amount": 91871.7, "Status": false },
+  { "TransactionID": 3, "Date": "14/11/2024", "Amount": 55209.42, "Status": true },
+  { "TransactionID": 4, "Date": "10/07/2024", "Amount": 74744.89, "Status": false },
+  { "TransactionID": 5, "Date": "10/07/2024", "Amount": 13650.49, "Status": true },
+  { "TransactionID": 6, "Date": "17/10/2024", "Amount": 98649.98, "Status": true },
+  { "TransactionID": 7, "Date": "21/02/2025", "Amount": 36208.97, "Status": false },
+  { "TransactionID": 8, "Date": "30/05/2024", "Amount": 7604.11, "Status": false },
+  { "TransactionID": 9, "Date": "09/08/2024", "Amount": 84218.0, "Status": false },
+  { "TransactionID": 10, "Date": "27/07/2024", "Amount": 5128.13, "Status": true },
+  { "TransactionID": 11, "Date": "15/07/2024", "Amount": 86549.01, "Status": false },
+  { "TransactionID": 12, "Date": "10/08/2024", "Amount": 52703.95, "Status": true },
+  { "TransactionID": 13, "Date": "05/10/2024", "Amount": 92049.95, "Status": true },
+  { "TransactionID": 14, "Date": "05/03/2025", "Amount": 35911.23, "Status": false },
+  { "TransactionID": 15, "Date": "23/01/2025", "Amount": 2708.6, "Status": false },
+  { "TransactionID": 16, "Date": "12/04/2024", "Amount": 47746.09, "Status": true },
+  { "TransactionID": 17, "Date": "29/07/2024", "Amount": 44315.27, "Status": false },
+  { "TransactionID": 18, "Date": "09/12/2024", "Amount": 51869.79, "Status": true },
+  { "TransactionID": 19, "Date": "28/06/2024", "Amount": 42064.02, "Status": true },
+  { "TransactionID": 20, "Date": "25/10/2024", "Amount": 73438.14, "Status": false }
+]
