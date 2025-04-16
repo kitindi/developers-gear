@@ -38,8 +38,21 @@ const Transactions = () => {
 
   return (
     <div>
+      <div className="w-full flex justify-between items-center px-4 py-2 rounded-md mb-4">
+        <div className="flex-1">
+          <h2 className="text-md font-medium text-gray-500">Transactions</h2>
+        </div>
+        <div className="flex-2">
+          <input
+            type="text"
+            placeholder="Search by Transaction ID, Date, Amount, or Status"
+            className="border border-gray-300 rounded-md p-2 mb-4 w-full"
+            onChange={(e) => setFiltering(e.target.value)}
+          />
+        </div>
+      </div>
       <table className="m-full mx-auto border-collapse border border-slate-400 w-full text-left " cellPadding="10">
-        <thead className="text-xs text-gray-700  bg-gray-200">
+        <thead className="text-xs text-gray-700  bg-gray-100">
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id} className="border border-gray-400">
               {headerGroup.headers.map((header) => (
@@ -71,12 +84,20 @@ const Transactions = () => {
             {/* <button className="px-5 py-1.5 rounded-sm  cursor-pointer text-sm" onClick={() => table.setPageIndex(0)}>
               First Page
             </button> */}
-            <button className="px-5 py-1.5 rounded-sm  cursor-pointer text-sm" onClick={() => table.previousPage()} disabled={!table.getCanPreviousPage()}>
+            <button
+              className="px-5 py-1.5 rounded-sm  cursor-pointer text-xs bg-red-400 text-white"
+              onClick={() => table.previousPage()}
+              disabled={!table.getCanPreviousPage()}
+            >
               Previous Page
             </button>
           </div>
           <div className="flex  items-center mt-4 space-x-1">
-            <button className="px-5 py-1.5 rounded-sm  cursor-pointer text-sm" onClick={() => table.nextPage()} disabled={!table.getCanNextPage()}>
+            <button
+              className="px-3 py-1.5 rounded-sm  cursor-pointer text-xs bg-red-400 text-white"
+              onClick={() => table.nextPage()}
+              disabled={!table.getCanNextPage()}
+            >
               Next Page
             </button>
             {/* <button className="px-5 py-1.5 rounded-sm  cursor-pointer text-sm" onClick={() => table.setPageIndex(table.getPageCount() - 1)}>

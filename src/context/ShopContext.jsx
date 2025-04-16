@@ -17,6 +17,11 @@ const ShopContextProvider = ({ children }) => {
   const [userData, setUserData] = useState({ username: "", role: "" });
   const [cartOpen, setCartOpen] = useState(false);
   const [products, setProducts] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShowModal = () => {
+    setShowModal(!showModal);
+  };
 
   const addToCart = (itemIndex) => {
     setCartItems((prevCartItems) => {
@@ -95,6 +100,8 @@ const ShopContextProvider = ({ children }) => {
     getTotalCartAmount,
     username,
     role,
+    showModal,
+    handleShowModal,
   };
   return <ShopContext.Provider value={contextValue}>{children}</ShopContext.Provider>;
 };

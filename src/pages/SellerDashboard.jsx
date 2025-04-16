@@ -4,14 +4,14 @@ import Transactions from "../components/transactionTable/transactions";
 
 const SellerDashboard = () => {
   return (
-    <div className="w-full min-h-screen px-4 md:px-12 lg:px-28 bg-gray-100">
+    <div className="w-full min-h-screen px-4 md:px-12 lg:px-20 bg-gray-100">
       <div className="grid grid-cols-12">
         <div className="col-span-2  min-h-screen py-4 pr-3 border-gray-200 border-r-1">
           <h3 className="text-gray-500 text-sm pt-4">Menu</h3>
           <Sidebar />
         </div>
         {/* right column */}
-        <div className="col-span-10 py-5 px-10">
+        <div className="col-span-10 py-5  px-4 lg:px-8">
           <div className="grid grid-cols-12 gap-8">
             {/* Data cards */}
             <div className="bg-gray-50 py-4 rounded-sm col-span-4 flex items-center gap-12 px-8 ">
@@ -52,7 +52,6 @@ const SellerDashboard = () => {
             </div>
           </div>
           <div className="mt-5 w-full bg-white rounded-md my-5">
-            <h2 className="text-md font-medium text-gray-500 pt-4 px-8">Transactions</h2>
             <div className="overflow-x-auto px-8 py-4">
               <Transactions />
             </div>
